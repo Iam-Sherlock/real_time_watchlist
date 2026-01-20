@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "388329865979",
+    "project_id": "real-time-watchlist",
+    "storage_bucket": "real-time-watchlist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388329865979:android:eb1911a1f902b5f467e65e",
+        "android_client_info": {
+          "package_name": "com.example.real_time_watchlist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1DUIxlP-UX_ivAuDNP4ucuFQqNSDfXrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
