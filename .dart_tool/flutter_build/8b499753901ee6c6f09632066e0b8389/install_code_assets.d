@@ -1,0 +1,1 @@
+ /Users/newton/Documents/Mexora\ Projects/real_time_watchlist/.dart_tool/flutter_build/8b499753901ee6c6f09632066e0b8389/native_assets.json: 

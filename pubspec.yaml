@@ -9,11 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^4.4.0
+  supabase_flutter: ^2.5.8
   go_router: ^17.0.1
-  firebase_auth: ^6.1.4
-  cloud_firestore: ^6.1.2
   flutter_riverpod: ^3.2.0
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +21,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env

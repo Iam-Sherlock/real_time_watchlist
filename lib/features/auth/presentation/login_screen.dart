@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:real_time_watchlist/features/auth/repo/auth_service.dart';
@@ -49,26 +48,36 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () async {
-                // Handle login logic
-                final isSignedIn = await AuthService()
-                    .signInWithEmailAndPassword(
-                      email: emailController.text,
-                      password: passwordController.text,
-                      context: context,
-                    );
-                if (isSignedIn) {
-                  context.go('/home');
-                } else {
-                  // Show error message
-                  ScaffoldMessenger.of(
-                    context,
-                  ).showSnackBar(const SnackBar(content: Text('Login failed')));
-                }
-              },
-              child: const Text('Login'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () async {
+                    // Handle login logic
+                    final isSignedIn = await AuthService()
+                        .signInWithEmailAndPassword(
+                          email: emailController.text,
+                          password: passwordController.text,
+                          context: context,
+                        );
+                    if (isSignedIn) {
+                      context.go('/home');
+                    } else {
+                      // Show error message
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(const SnackBar(content: Text('Login failed')));
+                    }
+                  },
+                  child: const Text('Login'),
+                ),
+                SizedBox(width: 16.0),
+                ElevatedButton(onPressed: (){
+                  context.push('/signup');
+                }, child: const Text('Signup'))
+              ],
             ),
+            
           ],
         ),
       ),
