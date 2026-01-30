@@ -24,6 +24,7 @@ final removeFromWatchlistProvider = FutureProvider.family<void, int>((
   return databaseService.removeFromWatchlist(productId);
 });
 
+
 final watchlistDataProvider = StreamProvider<List<InstrumentModel>>((ref) {
   final databaseService = ref.watch(dataService);
   return databaseService.getWatchlistLiveData();

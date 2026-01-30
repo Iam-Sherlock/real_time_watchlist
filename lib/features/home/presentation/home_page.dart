@@ -77,6 +77,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                               await ref
                                   .read(dataService)
                                   .addToWatchlist(stocks[index].id);
+                              ref.invalidate(watchlistDataProvider);
                               if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(

@@ -55,6 +55,7 @@ class _WatchlistScreenState extends ConsumerState<WatchlistScreen> {
                             icon: Icon(Icons.delete, color: Colors.red),
                             onPressed: () {
                               ref.read(removeFromWatchlistProvider(stocks[index].id));
+                              ref.invalidate(watchlistDataProvider);
                               if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
